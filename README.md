@@ -101,7 +101,11 @@ Here's a link on [how to give a good lightning talk](https://www.semrush.com/blo
 
 ### Submission
 
-**Materials must be submitted on January 5 by 10:00 am EST (before class starts).**
+**Deadline**:
+
+10:00 am EST on January, 5th 2021 (before we start our presentations in class)
+
+**Submission repo contents** (materials to submit):
 
 Your technical report will be hosted on Github Enterprise. Make sure it includes:
 
