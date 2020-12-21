@@ -124,7 +124,7 @@ Your technical report will be hosted on Github Enterprise. Make sure it includes
 
 ### Presentation Structure
 
-- **Must be within time limit established by local instructor.**
+- **Must be under 5 minutes.**
 - Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
 - Consider the audience. Assume you are presenting to a non-technical audience (executives with the College Board, school administrators, admissions counselors, State officials, etc.).
 - Start with the **data science problem**.
