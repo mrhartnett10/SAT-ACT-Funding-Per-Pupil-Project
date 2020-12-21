@@ -150,62 +150,81 @@ Your local instructor will evaluate your project (for the most part) using the f
 | **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
 | **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
 
-<details><summary>**Project Organization**</summary>
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?</details>
+</br> </br>
 
-**Clarity of Message**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the project?
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
 
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Does the student demonstrate mastery masking in Pandas?
-- Does the student demonstrate mastery sorting in Pandas?
 
-**Data Cleaning and EDA**
-- Does the student fix data entry issues?
-- Are data appropriately labeled?
-- Are data appropriately typed?
-- Are datasets combined correctly?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
 
-**Visualizations**
-- Are the requested visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
+<details><summary><b>Project Organization:</b> 0 - 3 pts.</summary>
+    <ul>
+<li> Are modules imported correctly (using appropriate aliases)?</li>
+<li> Are data imported/saved using relative paths?</li>
+<li> Does the README provide a good executive summary of the project?</li>
+<li> Is markdown formatting used appropriately to structure notebooks?</li>
+<li> Are there an appropriate amount of comments to support the code?</li>
+<li> Are files & directories organized correctly?</li>
+<li> Are there unnecessary files included?</li>
+<li> Do files and directories have well-structured, appropriate, consistent names?</li>
+    </ul></details>
 
-**Research and Conceptual Understanding**
-- Were useful insights gathered from outside sources?
-- Are sources clearly identified?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
+<details><summary><b>Clarity of Message:</b> 0 - 3 pts.</summary>
+    <ul>
+<li> Is the problem statement clearly presented?</li>
+<li> Does a strong narrative run through the project?</li>
+<li> Does the student provide appropriate context to connect individual steps back to the overall project?</li>
+<li> Is it clear how the final recommendations were reached?</li>
+<li> Are the conclusions/recommendations clearly stated?</li>
+    </ul></details>
 
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
+<details><summary><b>Python Syntax and Control Flow:</b> 0 - 3 pts.</summary>
+    <ul>
+<li> Is care taken to write human readable code?</li>
+<li> Is the code syntactically correct (no runtime errors)?</li>
+<li> Does the code generate desired results (logically correct)?</li>
+<li> Does the code follows general best practices and style guidelines?</li>
+<li> Are Pandas functions used appropriately?</li>
+<li> Does the student demonstrate mastery masking in Pandas?</li>
+<li> Does the student demonstrate mastery sorting in Pandas?</li>
+    </ul></details>
+
+<details><summary><b>Data Cleaning and EDA:</b> 0 - 3 pts.</summary>
+    <ul>
+<li> Does the student fix data entry issues?</li>
+<li> Are data appropriately labeled?</li>
+<li> Are data appropriately typed?</li>
+<li> Are datasets combined correctly?</li>
+<li> Are appropriate summary statistics provided?</li>
+<li> Are steps taken during data cleaning and EDA framed appropriately?</li>
+    </ul></details>
+
+<details><summary><b>Visualizations:</b> 0 - 3 pts.</summary>
+    <ul>
+<li> Are the requested visualizations provided?</li>
+<li> Do plots accurately demonstrate valid relationships?</li>
+<li> Are plots labeled properly?</li>
+<li> Plots interpreted appropriately?</li>
+<li> Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?</li>
+    </ul></details>
+
+<details><summary><b>Research and Conceptual Understanding:</b> 0 - 3 pts.</summary>
+    <ul>
+<li> Were useful insights gathered from outside sources?</li>
+<li> Are sources clearly identified?</li>
+<li> Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?</li>
+    </ul></details>
+
+<details><summary><b>Presentation:</b> 0 - 3 pts.</summary>
+    <ul>
+<li> Is the problem statement clearly presented?</li>
+<li> Does a strong narrative run through the presentation building toward a final conclusion?</li>
+<li> Are the conclusions/recommendations clearly stated?</li>
+<li> Is the level of technicality appropriate for the intended audience?</li>
+<li> Is the student substantially over or under time?</li>
+<li> Does the student appropriately pace their presentation?</li>
+<li> Does the student deliver their message with clarity and volume?</li>
+<li> Are appropriate visualizations generated for the intended audience?</li>
+<li> Are visualizations necessary and useful for supporting conclusions/explaining findings?</li>
+    </ul></details>
 
 In order to pass the project, students must earn a minimum score of 1 for each category.
 - Earning below a 1 in one or more of the above categories would result in a failing project.
@@ -214,3 +233,4 @@ In order to pass the project, students must earn a minimum score of 1 for each c
 ### REMEMBER:
 
 This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+
