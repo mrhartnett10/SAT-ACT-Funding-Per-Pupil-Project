@@ -1,5 +1,36 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: Standardized Test Analysis
 
+
+### Administrative
+
+#### Deadline:
+
+10:00 am EST on January, 5th 2021 (before we start our presentations in class)
+
+#### Submission process
+
+Create an issue in this repository:
+* *Title*: first and last names
+* *Body* (comment): link to your finalized repository
+
+#### Materials to submit
+
+To receive full credit, please include the following materials into your submission repository:
+
+- readme.md
+    * describes your work
+    * is not this file
+- Jupyter notebook(s)
+    * name describes your project
+    * contains your analysis
+- Data files
+    * remove unused files
+    * ex., `data` folder
+- Presentation slides
+    * any slides format
+- Any other necessary files (images, etc.)
+    * ex., `assets` folder
+
 ### Overview
 
 Our first module in DSI covers:
@@ -99,29 +130,6 @@ Here's a link on [how to give a good lightning talk](https://www.semrush.com/blo
 
 ---
 
-### Submission
-
-**Deadline**:
-
-10:00 am EST on January, 5th 2021 (before we start our presentations in class)
-
-**Submission repo contents** (materials to submit):
-
-Your technical report will be hosted on Github Enterprise. Make sure it includes:
-
-- A README.md (that isn't this file)
-- Jupyter notebook(s) with your analysis (renamed to describe your project)
-- Data files
-- Presentation slides
-- Any other necessary files (images, etc.)
-
-**Process**:
-1. Create an issue in this repository
-2. Title should be your first and last name
-3. Body (comment) should contain a link to your Project 1 repository
-
----
-
 ### Presentation Structure
 
 - **Must be under 5 minutes.**
@@ -138,24 +146,14 @@ Be sure to rehearse and time your presentation before class.
 ---
 
 ### Rubric
-Your local instructor will evaluate your project (for the most part) using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
 
-**Scores will be out of 21 points based on the 7 items in the rubric.** <br>
-*3 points per section*<br>
+**Scores**
 
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
+Project 1 will be evaluated based on the 7 criteria, each worth between 0 (min) and 3 (max) points:
 
-</br> </br>
-
-
-
-
-<details><summary><b>Project Organization:</b> 0 - 3 pts.</summary>
+<details><summary>Expand</summary>
+    <ol>
+<li><details><summary><b>Project Organization:</b> 0 - 3 pts.</summary>
     <ul>
 <li> Are modules imported correctly (using appropriate aliases)?</li>
 <li> Are data imported/saved using relative paths?</li>
@@ -165,18 +163,18 @@ Your local instructor will evaluate your project (for the most part) using the f
 <li> Are files & directories organized correctly?</li>
 <li> Are there unnecessary files included?</li>
 <li> Do files and directories have well-structured, appropriate, consistent names?</li>
-    </ul></details>
+    </ul></details></li>
 
-<details><summary><b>Clarity of Message:</b> 0 - 3 pts.</summary>
+<li><details><summary><b>Clarity of Message:</b> 0 - 3 pts.</summary>
     <ul>
 <li> Is the problem statement clearly presented?</li>
 <li> Does a strong narrative run through the project?</li>
 <li> Does the student provide appropriate context to connect individual steps back to the overall project?</li>
 <li> Is it clear how the final recommendations were reached?</li>
 <li> Are the conclusions/recommendations clearly stated?</li>
-    </ul></details>
+    </ul></details></li>
 
-<details><summary><b>Python Syntax and Control Flow:</b> 0 - 3 pts.</summary>
+<li><details><summary><b>Python Syntax and Control Flow:</b> 0 - 3 pts.</summary>
     <ul>
 <li> Is care taken to write human readable code?</li>
 <li> Is the code syntactically correct (no runtime errors)?</li>
@@ -185,9 +183,9 @@ Your local instructor will evaluate your project (for the most part) using the f
 <li> Are Pandas functions used appropriately?</li>
 <li> Does the student demonstrate mastery masking in Pandas?</li>
 <li> Does the student demonstrate mastery sorting in Pandas?</li>
-    </ul></details>
+    </ul></details></li>
 
-<details><summary><b>Data Cleaning and EDA:</b> 0 - 3 pts.</summary>
+<li><details><summary><b>Data Cleaning and EDA:</b> 0 - 3 pts.</summary>
     <ul>
 <li> Does the student fix data entry issues?</li>
 <li> Are data appropriately labeled?</li>
@@ -195,25 +193,25 @@ Your local instructor will evaluate your project (for the most part) using the f
 <li> Are datasets combined correctly?</li>
 <li> Are appropriate summary statistics provided?</li>
 <li> Are steps taken during data cleaning and EDA framed appropriately?</li>
-    </ul></details>
+    </ul></details></li>
 
-<details><summary><b>Visualizations:</b> 0 - 3 pts.</summary>
+<li><details><summary><b>Visualizations:</b> 0 - 3 pts.</summary>
     <ul>
 <li> Are the requested visualizations provided?</li>
 <li> Do plots accurately demonstrate valid relationships?</li>
 <li> Are plots labeled properly?</li>
 <li> Plots interpreted appropriately?</li>
 <li> Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?</li>
-    </ul></details>
+    </ul></details></li>
 
-<details><summary><b>Research and Conceptual Understanding:</b> 0 - 3 pts.</summary>
+<li><details><summary><b>Research and Conceptual Understanding:</b> 0 - 3 pts.</summary>
     <ul>
 <li> Were useful insights gathered from outside sources?</li>
 <li> Are sources clearly identified?</li>
 <li> Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?</li>
-    </ul></details>
+    </ul></details></li>
 
-<details><summary><b>Presentation:</b> 0 - 3 pts.</summary>
+<li><details><summary><b>Presentation:</b> 0 - 3 pts.</summary>
     <ul>
 <li> Is the problem statement clearly presented?</li>
 <li> Does a strong narrative run through the presentation building toward a final conclusion?</li>
@@ -224,13 +222,58 @@ Your local instructor will evaluate your project (for the most part) using the f
 <li> Does the student deliver their message with clarity and volume?</li>
 <li> Are appropriate visualizations generated for the intended audience?</li>
 <li> Are visualizations necessary and useful for supporting conclusions/explaining findings?</li>
-    </ul></details>
+    </ul></details></li>
+    </ol>
+</details>
 
-In order to pass the project, students must earn a minimum score of 1 for each category.
-- Earning below a 1 in one or more of the above categories would result in a failing project.
-- While a minimum of 1 in each category is the required threshold for graduation, students should aim to earn at least an average of 1.5 across each category. An average score below 1.5, while it may be passing, means students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
+Each of the 7 grading criteria is scored using following guidelines:
+
+<details><summary>Expand</summary><table>
+  <caption>Rubric scoring</caption>
+  <tr>
+    <th>Score</th>
+    <th>Minimum requirements</th>
+    <th>Interpretation</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Not met</td>
+    <td>Not ready for showcasing as part of portfolio or job search</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Met</td>
+    <td>Falls significantly short of portfolio-ready expectations</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Met or exceeded</td>
+    <td>Falls short of being portfolio-ready</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Exceeded</td>
+    <td>Portfolio-ready; demonstrates a thorough understanding of every consideration</td>
+  </tr>
+</table></details>
+
+
+Make sure that you consider and follow the recommendations above **while** working on your project!
+
+**Grades**:
+
+For graduation purposes, scores are translated into grades of either Pass or Fail.
+
+To earn a grade of:
+1. **Pass**: earn *at least 1* in each rubric category
+2. **Fail**: earn a *0* in one or more rubric categories
+    * **Warning**: for 5 projects in this course, only one project resubmission is allowed
+
+*Note*:
+1. Aim to earn at least a 1.5 average across all rubric categories
+2. Reach out for feedback if your average is between 1 and 1.5
+    * Rubric average of 1-1.5 indicates that the project should be significantly improved before showcasing it as part of a portfolio or the job search
 
 ### REMEMBER:
 
 This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
-
