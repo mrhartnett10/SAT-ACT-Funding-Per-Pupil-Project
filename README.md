@@ -150,7 +150,7 @@ Your local instructor will evaluate your project (for the most part) using the f
 | **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
 | **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
 
-**Project Organization**
+<details><summary>**Project Organization**</summary>
 - Are modules imported correctly (using appropriate aliases)?
 - Are data imported/saved using relative paths?
 - Does the README provide a good executive summary of the project?
@@ -158,7 +158,7 @@ Your local instructor will evaluate your project (for the most part) using the f
 - Are there an appropriate amount of comments to support the code?
 - Are files & directories organized correctly?
 - Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
+- Do files and directories have well-structured, appropriate, consistent names?</details>
 
 **Clarity of Message**
 - Is the problem statement clearly presented?
