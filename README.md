@@ -101,7 +101,7 @@ Here's a link on [how to give a good lightning talk](https://www.semrush.com/blo
 
 ### Submission
 
-**Materials must be submitted on January 5.**
+**Materials must be submitted on January 5 by 10:00 am EST (before class starts).**
 
 Your technical report will be hosted on Github Enterprise. Make sure it includes:
 
@@ -111,7 +111,10 @@ Your technical report will be hosted on Github Enterprise. Make sure it includes
 - Presentation slides
 - Any other necessary files (images, etc.)
 
-**Check with your local instructor for how they would like you to submit your repo for review.**
+**Process**:
+1. Create an issue in this repository
+2. Title should be your first and last name
+3. Body (comment) should contain a link to your Project 1 repository
 
 ---
 
