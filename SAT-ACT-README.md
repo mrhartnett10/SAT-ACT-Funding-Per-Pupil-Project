@@ -1,0 +1,30 @@
+# READ ME
+
+## MAKING SENSE OF THE COLLEGE APPLICATION PROCESS THROUGH DATA SCIENCE
+
+#### 1. Designing a problem
+
+When I set out to create a goal for this project, I aimed to draw upon on my own college application process and design a project that I felt would have benefited me during this time. I remember being very confused between the differences of the two tests: the SATs and ACTs. SATs always seemed like the default exam, but I remember wondering to myself if maybe the ACT was "easier" and would yield more favorable test results. So that was my first goal for the project, to highlight whether there might be a difference in level of difficulty between the two. 
+
+My second goal, which I think would have been the most useful tool for "previous high school me", was setting out to determine which colleges I "qualified" for after recieving my score. I remember having very knowledge of which schools were "good", which schools might be a "reach", which schools my parents didn't want me to go to (party schools). I found it quite strenuous to have to sift through the Princeton Review book of colleges on a whim with hopes of seeing my score match the listed associated SAT acceptance score for that college. So the second element of my project was to create a widget that would allow me to input my score and kick out a list of colleges that matched with my score, comparing both the 25th and 75th percentiles (allowing me to see where I might fall amongst the previously accepted student body population). 
+
+#### 2. Selecting Data Sets:
+
+After inspecting and reading through all available default data sources we were provided, it was clear to me that my project would be best utilize three of the data sets. The first two that intuitively made sense with my first goal in mind were the 2019 average SAT scores by state and the 2019 average ACT scores by state. These two sets would allow me to compare the two SAT & ACT scores linked by state, and see if I could draw any formal comparisons. 
+
+The last set that seemed perfect for my second goal in mind was the By Colleges data frame that included the expected SAT and ACT scores in a 25th - 75th percentile range format. This would give me an opportunity to compare either my score, the state average, or just any random score and see if there was any overlap between that score and the specific college's expected score. If there was an overlap, it would be then safe to assume that I had a shot at the school (with varying degrees of chances). 
+
+#### 4. Cleaning the Data:
+The first step in cleaning and preparing the data was to find a way to combine the first two datasets so I could compare both the SAT scores and ACT scores by state in one data frame. This was simple enough by using the merge command, I was able to join the data sets on the 'State' column and then rearrange the data accordingly into a more fluid format. The next challenge came in converting the participation percentages from an object data type that had a percentage into a float, which would allow us to perform detailed analysis when it came to sorting and comparing against other floats. I had to rely on the help of stack overflow to discover the .strip command which took away the % character and then convert it into a float data type. This allowed us to sort the data effecitively by participation (otherwise it just sorted by the first integer in the series i.e. 91%, 9%, 88% etc..). 
+
+The next, most challenging step, was to similarly convert the percentile column into a float integer that would allow us to compare our score data against the specific college's score range. The difficulty arose because there were white space characters hidden into the data, which required a hard coded .replace method. If anyone has a different method I'd love to hear it! From there, I had to remove all the null values which were originally shown as "--", in order to keep them in the data I replaced them with the min-max range of scores 400-1600 as a default. From there I split the string on the '-' character which allowed me to create now individual lists of strings for each row. The final step (also with the help of stack overflow) was looping through the column and applying a map float to the lists. **Remeber to use range(len()) for this loop otherwise it won't loop properly**
+
+I lied, the next step was definitely the most challenging. I set out to create the function that would allow me to input a score and return a list of corresponding colleges that aligned with that score. The challenge was to find a way to loop the score number through the now converted lists but index it to the appropriate percentile. With some elbow grease I was ablet to make it work by indexing first out to [i] and then to either [0] or [1] based upon which percentile I was aiming at for the function. Similar to before, the "aha!" moment came when I realized that I had to utilize range(len(filtered_column)). Otherwise it was returning an empty list. 
+
+#### 5. Fun With Widgets!
+
+I wanted to create some way that allowed me to interactively input my score that would kick out the list (instead of just calling the function with the score as the argument). After some google searching with no luck, I just happened to see the widget drop down and decided to investigate. Bingo! It was exactly what I needed and rather simple/straightforward. I was able to create a much more 'user friendly' widget that simply required the user to enter in their score either with a slider or with typing it into a box, and the function was called behind the scenes. 
+
+#### 6. Create a slideshow
+
+Finally I had to find a way to utilize this data into a meaningful slideshow. What helped for this was first brainstorming in my head a format and how I wanted to try and tell a story with the data. Once I got into that mindset, the presentation started to unfold and I tried to keep in mind the audience (in this case a group of high school students). 
