@@ -1,279 +1,52 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: Standardized Test Analysis
+# README
 
+###  Problem Statement: What is the correlation between state spending per pupil and resulting SAT/ACT scores? Will higher spending correlate with higher scores on a state level?
 
-### Administrative
 
-#### Deadline:
+### Outside Research:
+Outside Research obtained from downloading excel sheet for education funding by state from: https://www.governing.com/finance/Education-Spending-Per-Student-By-State.html
 
-10:00 am EST on January, 5th 2021 (before we start our presentations in class)
+During research it was important to keep in mind that states have different populations so there funding will show accordingly (lower populations will require less funding, high pops will require higher funding). That is why I wanted to make sure I found a data set that would include the funding per pupil, which gives us a more comparable, equally scaled variable to work with.
 
-#### Submission process
+Per website above: Nationally, the 2018 data indicates $12,612 is spent on public education per student, up nearly $1,000 as compared to the 2016 data. Significant variation exists across states; New York spends more than $24,000 per student, while states like Utah and Idaho report spending less than a third as much. 
 
-Create an issue in this repository:
-* *Title*: first and last names
-* *Body* (comment): link to your finalized repository
+I wanted to include the above excerpt because with just this tidbit it leads me to believe that the observed increase in investing in students is motivated by the belief that there is a positive correlation between spending per pupil and "success" (higher scores). Let's unpack some of the data and see if we can draw any correlations.
 
-#### Materials to submit
 
-To receive full credit, please include the following materials into your submission repository:
 
-- readme.md
-    * describes your work
-    * is not this file
-- Jupyter notebook(s)
-    * name describes your project
-    * contains your analysis
-- Data files
-    * remove unused files
-    * ex., `data` folder
-- Presentation slides
-    * any slides format
-- Any other necessary files (images, etc.)
-    * ex., `assets` folder
+### Data Dictionary:
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|state|object|2018 ACT/ACT/Public School Spending Per Student By State|Indicates the specific state of the country|
+|sat_participation|float|2018 SAT| The reported participation rate of pupil's that took the SAT across the state|
+|ebrw|int|2018 SAT|The statewide average score for the Evidence-Based Reading and Writing section of the SAT|
+|math|int|2018 SAT|The statewide average score for the Math section of the SAT|
+|sat_total|int|2018 SAT|The combined (total) statewide average score for the entire SAT|
+|act_participation|float|2018 ACT| The reported participation rate of pupil's that took the ACT across the state| 
+|act_total|int|2018 ACT|The reported statewide average score for the ACT exam|
+|total_spending_per_pupil|float|2018 Public School Spending Per Student By State|How much total money is spent on public education per student| 
+|total_spending|int|2018 Public School Spending Per Student By State|Total amount of public education spending per state|
+|instruction_spending_per_pupil|float|2018 Public School Spending Per Student By State|How much money is spent on salaries for teachers and teacher aides, textbooks, supplies and purchased services per student| 
+|total_instruction_spending|int|2018 Public School Spending Per Student By State|How much money is spent on salaries for teachers and teacher aides, textbooks, supplies and purchased services in total per state|
+|support_spending_per_pupil|float|2018 Public School Spending Per Student By State|How much money is spent on adminstrative expenses and support staff per student| 
+|total_support_spending|int|2018 Public School Spending Per Student By State|How much money is spent on adminstrative expenses and support staff in total per state| 
 
-### Overview
 
-Our first module in DSI covers:
-- Basic statistics and probability
-- Many Python programming concepts
-- Programmatically interacting with files and directories
-- Visualizations
-- EDA
-- Working with Jupyter notebooks for development and reporting
 
-You might wonder if you're ready to start doing data science. While you still have **tons** to learn, there are many aspects of the data science process that you're ready to tackle. Project 1 aims to allow you to practice and demonstrate these skills.
+### Cleaning: 
+The most important part of cleaning was to ensure proper data integrity. This meant checking for null values or any obvious incorrect observances and remedying them. Fortunately the data was well recorded and no issues arose. Next was to find ways to connect our data and merge them into one workable set. This was relatively easy since there was a common column "state" amongst all three which allowed me to join the sets using that column. From there all that was left was minor tweaks and removing anything that might create a problem for my analysis stage (converting percentages to floats, lower case columns, removing any spaces etc...) 
 
-For our first project, we're going to take a look at aggregate SAT and ACT scores and participation rates in the United States. We'll seek to identify trends in the data and combine our data analysis with outside research to address our problem statement.
 
-The SAT and ACT are standardized tests that many colleges and universities in the United States require for their admissions process. This score is used along with other materials such as grade point average (GPA) and essay responses to determine whether or not a potential student will be accepted to the university.
 
-The SAT has two sections of the test: Evidence-Based Reading and Writing and Math ([*source*](https://www.princetonreview.com/college/sat-sections)). The ACT has 4 sections: English, Mathematics, Reading, and Science, with an additional optional writing section ([*source*](https://www.act.org/content/act/en/products-and-services/the-act/scores/understanding-your-scores.html)). They have different score ranges, which you can read more about on their websites or additional outside sources (a quick Google search will help you understand the scores for each test):
-* [SAT](https://collegereadiness.collegeboard.org/sat)
-* [ACT](https://www.act.org/content/act/en.html)
+### Key Analysis:
+Once data was properly clearned and merged, my main focus was to be able to utilize the scatter plot effectively. While I've included just a nationwide look at just spending per pupil and the respective ACT and SAT scores, I wanted to ensure everything was kept in proper context. What I mean by this is that we are ensuring we are comparing our funding to the proper scores. If a state doesn't take the SAT at a high rate, it doesn't make much sense to heavily consider the effect that funding has on their SAT score. That is why I founf it important to group states into two groups: sat "preferred" and act "preferred" ("preferred" is used to indicate the state records a higher participation rate for this exam over the other). Although in order to give us a more complete picture, I wanted to make sure to include my analysis for both SAT and ACT on a national level to see if we could uncover any patterns through with those cuts. 
 
-Standardized tests have long been a controversial topic for students, administrators, and legislators. Since the 1940's, an increasing number of colleges have been using scores from sudents' performances on tests like the SAT and the ACT as a measure for college readiness and aptitude ([*source*](https://www.minotdailynews.com/news/local-news/2017/04/a-brief-history-of-the-sat-and-act/)). Supporters of these tests argue that these scores can be used as an objective measure to determine college admittance. Opponents of these tests claim that these tests are not accurate measures of students potential or ability and serve as an inequitable barrier to entry.
 
-### Problem Statement
 
-Generally speaking, you will be asked to come up with a data science problem. This problem is ultimately up to you, but below are some guidelines/things to consider when crafting a problem statement:
-> 1. Consider your audience. Who is your project going to help? Who will your presentation be geared towards? Establishing your audience first can help you narrow down your scope.
-> 2. Consider the data you will use. Based on the contents of this data, think about some questions you could reasonably answer. These questions should aim to solve some kind of problem.
-> 3. Based on these questions, what would bring some kind value to your audience? This can be business insights, increase sales, make decisions, etc.
-> 4. Put everything from the above steps together into a few sentences that describe the specific problem you are trying to solve and who it will benefit.
-> [Here is a blog post](https://towardsdatascience.com/defining-a-data-science-problem-4cbf15a2a461) about crafting a data science problem statement.
+### Conclusions/Recommendations: 
+Based on the analysis, if states want their students to succeed on either the SAT and more demonstrably the ACTs I would suggest allocating more spending on funding per pupil. While this seems like an intuitive suggestion, I think it's important to also note that there is no clear direct cause-effect relationship. Higher spending doesn't always result in higher scores as there are (as we might expect) many factors in play. But I would argue that shown from specifically our scatter plot comparisons, there is enough of a trend towards the belief that the more you allocate towards student spending, the better the testing results. We must also keep these findings contextualized which is why it was important to understand the participation rates of each exam across the state. In order to maximize our analysis we want to make sure we compare funding to the more frequent occuring exam scores. Otherwise if we are a state with lower funding but see high SAT scores (at only a 4% participation rate) and then underperforming ACT scores at a much higher rate, we won't be mislead to assume our funding is sufficiently allocated. 
 
-Here are some example prompts if you need inspiration:
-> * The new format for the SAT was released in March 2016. As an employee of the College Board - the organization that administers the SAT - you are a part of a team that tracks statewide participation and recommends where money is best spent to improve SAT participation rates. Your presentation and report should be geared toward non-technical executives with the College Board and you will use the provided data and outside research to make recommendations about how the College Board might work to increase the participation rate in a *state of your choice*.
-> * You work for a school district that has asked you to advise their high school students on what SAT or ACT score they should be aiming for based on their intended area of study or school preferences.
-> * You are hired by the state of California to analyze standardized test performance for various districts in the state and identify trends so they can allocate resources appropriately.
-> * Lately, more and more schools are opting to drop the SAT/ACT requirement for their Fall 2021 applications ([*read more about this here*](https://www.cnn.com/2020/04/14/us/coronavirus-colleges-sat-act-test-trnd/index.html)). You are hired by a college to advise their admissions team on why this should or should not continue beyond the Fall 2021 applications. (Note: problem statements related to this prompt may not be reasonable to answer just using the data provided. If you want to tackle this one, you may need to find additional data online.)
-> * *Feel free to be creative with your own prompt!*
-
-And here are some example problem statements related to the above prompts. Come up with your own or modify these for your needs, do not just copy the ones given here:
-> * The new format for the SAT was released in March 2016. Since then, levels of participation in multiple states have changed with varying legislative decisions. This project aims to explore trends in SAT and ACT participation for the years 2017-2019 and seeks to identify states that have decreasing SAT participation rates.
-> * High school students often know which colleges they would like to consider, but rarely know what SAT or ACT score they should aim for when applying to these colleges. We wish to explore the schools that have the highest and lowest SAT and ACT score requirements and see if there is a relationship between college prestige and test scores.
-> * The state of California has many school districts. This project aims to identify the districts that have the worst overall student performance on the SAT and ACT tests so the state can recommend programs and allocate resources to these districts in need. 
-> * We hypothesize that student performance on these tests is not an indicator of overall academic performance. This project seeks to see if a relationship exists between student GPA and SAT/ACT scores to support or oppose the continuation of these tests as a requirement for college applications.
-> * *Feel free to be creative with your own problem statement!*
-
----
-
-### Datasets
-
-#### Provided Data
-
-There are 10 datasets included in the [`data`](./data/) folder for this project. You are required to pick **at least two** of these to complete your analysis. Feel free to use more than two if you would like, or add other relevant datasets you find online.
-
-* [`act_2017.csv`](./data/act_2017.csv): 2017 ACT Scores by State ([source](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows))
-* [`act_2018.csv`](./data/act_2018.csv): 2018 ACT Scores by State ([source](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows))
-* [`act_2019.csv`](./data/act_2019.csv): 2019 ACT Scores by State ([source](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows))
-* [`act_2019_ca.csv`](./data/act_2019_ca.csv): 2019 ACT Scores in California by School ([source](https://www.cde.ca.gov/ds/sp/ai/) | [data dictionary](https://www.cde.ca.gov/ds/sp/ai/reclayoutact19.asp))
-* [`sat_2017.csv`](./data/sat_2017.csv): 2017 SAT Scores by State ([source](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/))
-* [`sat_2018.csv`](./data/sat_2018.csv): 2018 SAT Scores by State ([source](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/))
-* [`sat_2019.csv`](./data/sat_2019.csv): 2019 SAT Scores by State ([source](https://blog.prepscholar.com/average-sat-scores-by-state-most-recent))
-* [`sat_2019_by_intended_college_major.csv`](./data/sat_2019_by_intended_college_major.csv): 2019 SAT Scores by Intended College Major ([source](https://reports.collegeboard.org/pdf/2019-total-group-sat-suite-assessments-annual-report.pdf))
-* [`sat_2019_ca.csv`](./data/sat_2019_ca.csv): 2019 SAT Scores in California by School ([source](https://www.cde.ca.gov/ds/sp/ai/) | [data dictionary](https://www.cde.ca.gov/ds/sp/ai/reclayoutsat19.asp))
-* [`sat_act_by_college.csv`](./data/sat_act_by_college.csv): Ranges of Accepted ACT & SAT Student Scores by Colleges ([source](https://www.compassprep.com/college-profiles/))
-
-**Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
-
-#### Additional Data
-You are welcome to add any other data sources you find online to support your analysis, but this is **not required**.
-
----
-
-### Deliverables
-
-All of your projects will comprise of a written technical report and a presentation. As we continue in the course, your technical report will grow in complexity, but for this initial project it will comprise:
-- A Jupyter notebook that describes your data with visualizations & statistical analysis.
-- A README markdown file the provides an introduction to and overview of your project.
-- Your presentation slideshow rendered as a .pdf file.
-**NOTE**: Your entire Github repository will be evaluated as your technical report. Make sure that your files and directories are named appropriately, that all necessary files are included, and that no unnecessary or incomplete files are included.
-
-For your first presentation, you'll be presenting to a **non-technical** audience. You should prepare a slideshow with appropriately scaled visuals to complement a compelling narrative. **Presentation duration is 5 minutes.**
-
----
-
-### Technical Report Starter Code
-
-Future projects will require you to decide on the entire structure of your technical report. Here, we provide you with [starter code](./code/starter-code.ipynb) in a Jupyter notebook that will help to guide your data exploration and analysis. **If you choose to edit the core structure of this notebook, make sure you don't exclude any of the requested operations**.
-
----
-
-### Style Guide and Suggested Resources
-
-[Tim Dwyer](https://www.linkedin.com/in/jtimdwyer/) (former DSI student and TA) put together [this style guide](https://git.generalassemb.ly/DSI-US-13/style_guide). Some recommendations are geared toward future projects (which will include modeling and span multiple notebooks), but generally these are great recommendations.
-
-Here's a link on [how to give a good lightning talk](https://www.semrush.com/blog/16-ways-to-prepare-for-a-lightning-talk/), which provides some good recommendations for short presentations.
-
-[Here's a great summary](https://towardsdatascience.com/storytelling-with-data-a-data-visualization-guide-for-business-professionals-97d50512b407) of the main points of the book _Storytelling with Data_, which I can't recommend enough. [Here's a blog post](http://www.storytellingwithdata.com/blog/2017/8/9/my-guiding-principles) by the author about his guiding principles for visualizations.
-
----
-
-### Presentation Structure
-
-- **Must be under 5 minutes.**
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider the audience. Assume you are presenting to a non-technical audience (executives with the College Board, school administrators, admissions counselors, State officials, etc.).
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level, **CODE IS ALWAYS INAPPROPRIATE FOR A NON-TECHNICAL AUDIENCE**).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
-
-Be sure to rehearse and time your presentation before class.
-
----
-
-### Rubric
-
-**Scores**
-
-Project 1 will be evaluated based on the 7 criteria, each worth between 0 (min) and 3 (max) points:
-
-<details><summary>Expand</summary>
-    <ol>
-<li><details><summary><b>Project Organization:</b> 0 - 3 pts.</summary>
-    <ul>
-<li> Are modules imported correctly (using appropriate aliases)?</li>
-<li> Are data imported/saved using relative paths?</li>
-<li> Does the README provide a good executive summary of the project?</li>
-<li> Is markdown formatting used appropriately to structure notebooks?</li>
-<li> Are there an appropriate amount of comments to support the code?</li>
-<li> Are files & directories organized correctly?</li>
-<li> Are there unnecessary files included?</li>
-<li> Do files and directories have well-structured, appropriate, consistent names?</li>
-    </ul></details></li>
-
-<li><details><summary><b>Clarity of Message:</b> 0 - 3 pts.</summary>
-    <ul>
-<li> Is the problem statement clearly presented?</li>
-<li> Does a strong narrative run through the project?</li>
-<li> Does the student provide appropriate context to connect individual steps back to the overall project?</li>
-<li> Is it clear how the final recommendations were reached?</li>
-<li> Are the conclusions/recommendations clearly stated?</li>
-    </ul></details></li>
-
-<li><details><summary><b>Python Syntax and Control Flow:</b> 0 - 3 pts.</summary>
-    <ul>
-<li> Is care taken to write human readable code?</li>
-<li> Is the code syntactically correct (no runtime errors)?</li>
-<li> Does the code generate desired results (logically correct)?</li>
-<li> Does the code follows general best practices and style guidelines?</li>
-<li> Are Pandas functions used appropriately?</li>
-<li> Does the student demonstrate mastery masking in Pandas?</li>
-<li> Does the student demonstrate mastery sorting in Pandas?</li>
-    </ul></details></li>
-
-<li><details><summary><b>Data Cleaning and EDA:</b> 0 - 3 pts.</summary>
-    <ul>
-<li> Does the student fix data entry issues?</li>
-<li> Are data appropriately labeled?</li>
-<li> Are data appropriately typed?</li>
-<li> Are datasets combined correctly?</li>
-<li> Are appropriate summary statistics provided?</li>
-<li> Are steps taken during data cleaning and EDA framed appropriately?</li>
-    </ul></details></li>
-
-<li><details><summary><b>Visualizations:</b> 0 - 3 pts.</summary>
-    <ul>
-<li> Are the requested visualizations provided?</li>
-<li> Do plots accurately demonstrate valid relationships?</li>
-<li> Are plots labeled properly?</li>
-<li> Plots interpreted appropriately?</li>
-<li> Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?</li>
-    </ul></details></li>
-
-<li><details><summary><b>Research and Conceptual Understanding:</b> 0 - 3 pts.</summary>
-    <ul>
-<li> Were useful insights gathered from outside sources?</li>
-<li> Are sources clearly identified?</li>
-<li> Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?</li>
-    </ul></details></li>
-
-<li><details><summary><b>Presentation:</b> 0 - 3 pts.</summary>
-    <ul>
-<li> Is the problem statement clearly presented?</li>
-<li> Does a strong narrative run through the presentation building toward a final conclusion?</li>
-<li> Are the conclusions/recommendations clearly stated?</li>
-<li> Is the level of technicality appropriate for the intended audience?</li>
-<li> Is the student substantially over or under time?</li>
-<li> Does the student appropriately pace their presentation?</li>
-<li> Does the student deliver their message with clarity and volume?</li>
-<li> Are appropriate visualizations generated for the intended audience?</li>
-<li> Are visualizations necessary and useful for supporting conclusions/explaining findings?</li>
-    </ul></details></li>
-    </ol>
-</details>
-
-Each of the 7 grading criteria is scored using following guidelines:
-
-<details><summary>Expand</summary><table>
-  <caption>Rubric scoring</caption>
-  <tr>
-    <th>Score</th>
-    <th>Minimum requirements</th>
-    <th>Interpretation</th>
-  </tr>
-  <tr>
-    <td>0</td>
-    <td>Not met</td>
-    <td>Not ready for showcasing as part of portfolio or job search</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Met</td>
-    <td>Falls significantly short of portfolio-ready expectations</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Met or exceeded</td>
-    <td>Falls short of being portfolio-ready</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Exceeded</td>
-    <td>Portfolio-ready; demonstrates a thorough understanding of every consideration</td>
-  </tr>
-</table></details>
-
-
-Make sure that you consider and follow the recommendations above **while** working on your project!
-
-**Grades**:
-
-For graduation purposes, scores are translated into grades of either Pass or Fail.
-
-To earn a grade of:
-1. **Pass**: earn *at least 1* in each rubric category
-2. **Fail**: earn a *0* in one or more rubric categories
-    * **Warning**: for 5 projects in this course, only one project resubmission is allowed
-
-*Note*:
-1. Aim to earn at least a 1.5 average across all rubric categories
-2. Reach out for feedback if your average is between 1 and 1.5
-    * Rubric average of 1-1.5 indicates that the project should be significantly improved before showcasing it as part of a portfolio or the job search
-
-### REMEMBER:
-
-This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+#### Sources:
+state_funding_2018.csv: downloaded as an xlsx file from: https://www.governing.com/finance/Education-Spending-Per-Student-By-State.html (then converted to csv with jupyter notebook)
+act_2018.csv: class repo
+sat_2018.csv: class repo
