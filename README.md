@@ -15,6 +15,8 @@ I wanted to include the above excerpt because with just this tidbit it leads me 
 
 
 ### Data Dictionary:
+Below is a Data Dictionary for the three sets of data that we will utilize for my project. The 'Feeature' column corresponds with a specific column with the dataset, 'Type' notes the specific data type of the column, 'Dataset' tells us the dataset origin of the column, and intuitively 'Description' is a quick layman description of the column and what the elements of the column represent  
+
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
 |state|object|2018 ACT/ACT/Public School Spending Per Student By State|Indicates the specific state of the country|
